@@ -19,3 +19,19 @@ class WatermelonOrder(object):
 
         return total
 
+
+class CantaloupeOrder(object):
+    species = "Cantaloupe"
+    color = "tan"
+    imported = False
+    shape = "natural"
+    seasons = ["Spring", "Summer"]
+    base_price = 5.0
+
+    def get_price(self, qty):
+
+        if qty >= 5:
+            total = (qty * self.base_price) * 0.5
+        else: 
+            total = qty * self.base_price
+        return total
