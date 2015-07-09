@@ -80,3 +80,50 @@ class Santa_Claus(object):
         total = qty * self.base_price * 1.5
         return total
 
+class Christmas(object):
+    species = 'Christmas'
+    color = "green"
+    imported = False
+    shape = "natural"
+    seasons = ["Winter"]
+    base_price = 5.0    
+
+    def get_price(self, qty):
+        total = qty * self.base_price
+        return total
+
+class Horned_Melon(object):
+    species = 'Horned Melon'
+    color = "yellow"
+    imported = True
+    shape = "natural"
+    seasons = ["Summer"]
+    base_price = 5.0   
+
+    def get_price(self, qty):
+        total = qty * self.base_price * 1.5
+        return total
+
+class Xigua(object):
+    species = 'Xigua'
+    color = "black"
+    imported = True
+    shape = "square"
+    seasons = ["Summer"]
+    base_price = 10.0 
+
+    def get_price(self, qty):
+        total = qty * self.base_price * 1.5
+        return total
+
+class Ogen(object):
+    species = 'Ogen'
+    color = "tan"
+    imported = False
+    shape = "natural"
+    seasons = ["Summer", 'Spring']
+    base_price = 6.0   
+
+    def get_price(self, qty):
+        total = qty * self.base_price
+        return total
