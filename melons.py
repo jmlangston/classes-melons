@@ -1,21 +1,30 @@
 """This file should have our melon-type classes in it."""
 
+class Melons(object):
+    species = None
+    color = None
+    imported = None
+    shape = None
+    seasons = None
+    base_price = 5
 
-class WatermelonOrder(object):
+    def get_base_price(self):
+        return self.base_price
+
+class WatermelonOrder(Melons):
     species = "Watermelon"
     color = "green"
     imported = False
     shape = 'natural'
     seasons = ['Fall', 'Summer']
-    base_price = 5.0
 
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
 
         if qty >= 3:
-            total = (qty * self.base_price) * 0.75
+            total = (qty * self.get_base_price()) * 0.75
         else:
-            total = qty * self.base_price
+            total = qty * self.get_base_price()
 
         return total
 
@@ -26,7 +35,6 @@ class CantaloupeOrder(object):
     imported = False
     shape = "natural"
     seasons = ["Spring", "Summer"]
-    base_price = 5.0
 
     def get_price(self, qty):
 
@@ -37,19 +45,12 @@ class CantaloupeOrder(object):
         return total
 
 
-# def make_class_from_list(melons):
-    
-#     class melons[0](object):
-
-#     for melon_order in melons:
-
 class CasabaOrder(object):
     species = 'Casaba'
     color = "green"
     imported = True
     shape = "natural"
     seasons = ["Spring", "Summer", "Fall", "Winter"]
-    base_price = 6.0
 
     def get_price(self, qty):
         total = qty * self.base_price * 1.5
