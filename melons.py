@@ -35,3 +35,48 @@ class CantaloupeOrder(object):
         else: 
             total = qty * self.base_price
         return total
+
+
+# def make_class_from_list(melons):
+    
+#     class melons[0](object):
+
+#     for melon_order in melons:
+
+class CasabaOrder(object):
+    species = 'Casaba'
+    color = "green"
+    imported = True
+    shape = "natural"
+    seasons = ["Spring", "Summer", "Fall", "Winter"]
+    base_price = 6.0
+
+    def get_price(self, qty):
+        total = qty * self.base_price * 1.5
+        return total 
+
+
+class SharlynOrder(object):
+    species = 'Sharlyn'
+    color = "tan"
+    imported = True
+    shape = "natural"
+    seasons = ["Summer"]
+    base_price = 5.0    
+
+    def get_price(self, qty):
+        total = qty * self.base_price * 1.5
+        return total 
+
+class Santa_Claus(object):
+    species = 'Santa Claus'
+    color = "green"
+    imported = True
+    shape = "natural"
+    seasons = ["Winter", "Spring"]
+    base_price = 5.0    
+
+    def get_price(self, qty):
+        total = qty * self.base_price * 1.5
+        return total
+
